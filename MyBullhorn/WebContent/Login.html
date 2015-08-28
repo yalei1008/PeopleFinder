@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bullhorn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Bull Horn</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="Login.html">Log in</a></li>
+        <li><a href="List.jsp">All Blogs</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+	<table class="table table-condensed">
+		<tr><td>	
+		<h3 style="padding-top:30px;">Log In</h3>		
+		<form role="form" method="post" action="login">
+			<input type="hidden" name="type" value="2">
+			<div class="form-group">
+				<input type="text" class="form-control" name="name" placeholder="Please enter your name">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" name="password" placeholder="Please enter your password">
+			</div>
+			<input type="submit" class="btn btn-default" id="submit">Log In</input>
+		</form>
+		
+		</td>
+		</tr>
+		</table>
+
+	
+</div>
+
+</body>
+</html>

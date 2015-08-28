@@ -46,10 +46,10 @@ public class login extends HttpServlet {
 	  
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		HttpSession session = request.getSession(true);
 		EntityManager em=DBUtil.getEmFactory().createEntityManager();
 		EntityTransaction trans= em.getTransaction();
-		String userid= request.getParameter("userid");
+		String userid= request.getParameter("id");
 		String password = request.getParameter("upassword");
 	
 	
@@ -62,13 +62,16 @@ public class login extends HttpServlet {
 			BigDecimal pass=null;
 			for (User temp:list)
 			pass = temp.getUpassword();
+		}
+			else{
+				
+				response.setContentType("text/html");
+				String alert = "Please log in";
+				request.setAttribute("alert",alert);
+				getServletContext().getRequestDispatcher("/error.jsp").include(request, response);
+				
+							
 			
-			if(pass==null){
-				{
-					getServletContext().getRequestDispatcher("/index.html").forward(request, response);
-				}
-			}
-			else
 			{
 				getServletContext().getRequestDispatcher("/index.html").forward(request, response);
 			}

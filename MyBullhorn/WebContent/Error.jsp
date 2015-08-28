@@ -23,7 +23,7 @@
     </div>
   </div>
 </nav>
- ${Allpost}
-   
+${alert}
+
 </body>
 </html>
